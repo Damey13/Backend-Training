@@ -1,8 +1,9 @@
 package com.orthofx;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
-public class MatrixMultiplyByConstant {
+public class ArrayListMultiplyByConstant {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
@@ -10,29 +11,27 @@ public class MatrixMultiplyByConstant {
 		int r1 = input.nextInt();
 		System.out.println("Enter the number of columns of 1st matrix");
 		int c1 = input.nextInt();
-		int[][] arr1 = new int[r1][c1];
-		System.out.println("Enter the elements of the matrix");
+		ArrayList<ArrayList<Integer>> Arr1 = new ArrayList<ArrayList<Integer>>();
+		ArrayList<ArrayList<Integer>> Arr2 = new ArrayList<ArrayList<Integer>>();
+		System.out.println("Enter the elements of the 1st matrix");
+
 		for (int i = 0; i < r1; i++) {
+			Arr1.add(new ArrayList<Integer>());
 			for (int j = 0; j < c1; j++) {
-				arr1[i][j] = input.nextInt();
+				Arr1.get(i).add(input.nextInt());
 			}
 		}
 		System.out.println("Enter the number to be multiplied");
 		int n = input.nextInt();
 
+		System.out.println("The resulting matrix is :");
 		for (int i = 0; i < r1; i++) {
+			Arr2.add(new ArrayList<Integer>());
 			for (int j = 0; j < c1; j++) {
-				arr1[i][j] = arr1[i][j] * n;
-
+				Arr2.get(i).add(Arr1.get(i).get(j) * n);
 			}
 		}
-		System.out.println("Output matrix is");
-		for (int i = 0; i < r1; i++) {
-			for (int j = 0; j < c1; j++) {
-				System.out.print(arr1[i][j]);
-			}
-			System.out.println();
-		}
+		System.out.println(Arr2);
 		input.close();
 
 	}

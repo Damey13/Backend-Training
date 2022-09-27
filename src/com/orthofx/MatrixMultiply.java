@@ -16,7 +16,7 @@ public class MatrixMultiply {
 		int c2 = input.nextInt();
 		int[][] arr1 = new int[r1][c1];
 		int[][] arr2 = new int[r2][c2];
-		int[][] arr3 = new int[r1][c1];
+		int[][] arr3 = new int[r1][c2];
 		if (r1 == c2 && c1 == r2) {
 			System.out.println("Enter the elements of first matrix");
 			for (int i = 0; i < r1; i++) {
@@ -33,7 +33,7 @@ public class MatrixMultiply {
 			for (int i = 0; i < r1; i++) {
 				for (int j = 0; j < c2; j++) {
 					arr3[i][j] = 0;
-					for (int k = 0; k < 3; k++) {
+					for (int k = 0; k < r2; k++) {
 						arr3[i][j] += arr1[i][k] * arr2[k][j];
 					}
 					System.out.print(arr3[i][j] + " ");
@@ -41,10 +41,9 @@ public class MatrixMultiply {
 				System.out.println();
 			}
 
-		}
-		else
+		} else
 			System.out.println("Cannot Proceed");
+		input.close();
 
 	}
 }
-

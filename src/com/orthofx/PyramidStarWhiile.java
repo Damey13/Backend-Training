@@ -24,5 +24,7 @@ public class PyramidStarWhiile {
 			System.out.println();
 			i = i + 1;
 		}
+		input.close();
+
 	}
 }

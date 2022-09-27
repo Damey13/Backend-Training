@@ -17,6 +17,7 @@ public class AppleRed {
 			break;
 		default:
 			System.out.println("Green");
+			input.close();
 
 		}
 	}

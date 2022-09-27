@@ -43,9 +43,9 @@ public class MatrixAdd {
 				System.out.println();
 			}
 
-		}
-		else
-				System.out.println("Mismatched rows and column numbers");
+		} else
+			System.out.println("Mismatched rows and column numbers");
+		input.close();
 
 	}
 }
