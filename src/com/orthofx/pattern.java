@@ -9,8 +9,9 @@ public class pattern {
 		Scanner input = new Scanner(System.in);
 		String s = input.nextLine();
 
-		Stack<Integer> numstack = new Stack<>();
 		Stack<String> namestack = new Stack<>();
+		Stack<Integer> numstack = new Stack<>();
+
 		int i = 0;
 		namestack.push("");
 		try {

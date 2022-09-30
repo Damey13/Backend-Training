@@ -12,7 +12,7 @@ public class AppleRed {
 		case "apple":
 			System.out.println("Red");
 			break;
-		case "banana":
+		case "banana":	
 			System.out.println("Yellow");
 			break;
 		default:
