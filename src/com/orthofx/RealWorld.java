@@ -13,7 +13,7 @@ public class RealWorld {
 
 	static String towerName;
 	static String tenantName;
-
+	static int i=1;
 	public static void main(String[] args) {
 
 		do {
@@ -96,9 +96,11 @@ public class RealWorld {
 	}
 
 	public static Tenant createTenant(String name, Tower tower) {
-		Tenant tenant = new Tenant(tenantTable.size() + 1, name, tower);
+		Tenant tenant = new Tenant(i, name, tower);
 		tenantTable.put(tenant.getId(), tenant);
+		i++;
 		return tenant;
+		
 	}
 
 	public static void getTenant(int id) {

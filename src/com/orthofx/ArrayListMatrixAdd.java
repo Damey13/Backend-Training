@@ -55,7 +55,7 @@ public class ArrayListMatrixAdd {
 			}
 			input.close();
 		} catch (InputMismatchException e) {
-			System.out.println("Enter a number");
+			System.out.println("Pls enter a number");
 		}
 	}
 }
